@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+	<package name="default" extends="struts-default">
+		<action name="Login">
+			<result>/Login.jsp</result>
+		</action>
+		
+		<action name="First" class="LoginAction" method="login">
+			<result name="commomSuccess">/First.jsp</result>
+			<result name="managerSuccess">/Managment.jsp</result>
+			<result name="error">/Failed.jsp</result>
+			<result name="input">/Login.jsp</result>
+		</action>
+		
+		<action name="Achievement" class="AchievementAction" method="queryAllAchievement">
+			<result name="success">/Achievement.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="Achievement1" class="AchievementAction" method="queryAllAchievement">
+			<result name="success">/OperationAchievement.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="AchievementResult" class="AchievementAction" method="selectAchievement">
+			<result name="success">/AchievementResult.jsp</result>
+			<result name="input">/Achievement.jsp</result>
+		</action>
+		<action name="operationAchievement" class="AchievementAction">
+			<result name="success">/OperationAchievement.jsp</result>
+			<result name="input">/OperationAchievement.jsp</result>	
+		</action>
+		
+		<action name="News" class="NewsAction" method="queryAllNews">
+			<result name="success">/News.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="News1" class="NewsAction" method="queryAllNews">
+			<result name="success">/OperationNews.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="NewsResult" class="NewsAction" method="selectNews">
+			<result name="success">/NewsResult.jsp</result>
+			<result name="input">/News.jsp</result>
+		</action>
+		<action name="operation" class="NewsAction">
+			<result name="success">/OperationNews.jsp</result>
+			<result name="input">/OperationNews.jsp</result>
+		</action>
+		
+		<action name="Member" class="MemberAction" method="queryAllMember">
+			<result name="success">/Member.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="Member1" class="MemberAction" method="queryAllMember">
+			<result name="success">/OperationMember.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="operationmember" class="MemberAction">
+			<result name="success">/OperationMember.jsp</result>
+			<result name="input">/OperationMember.jsp</result>
+		</action>
+		
+		<action name="Introduction" class="IntroductionAction" method="queryAllIntroduction">
+			<result name="success">/Introduction.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="Introduction1" class="IntroductionAction" method="queryAllIntroduction">
+			<result name="success">/OperationIntroduction.jsp</result>
+			<result name="error">/Failed.jsp</result>
+		</action>
+		<action name="operationintroduction" class="IntroductionAction">
+			<result name="success">/OperationIntroduction.jsp</result>
+			<result name="input">/OperationIntroduction.jsp</result>
+		</action>
+	</package>
+</struts>    
